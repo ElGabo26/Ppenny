@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='styles/normalize.css')}}"
+    />
+    <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='styles/navbar.css')}}"
+    />
+    {% block head %}
+    {%endblock%}
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+          <a href="/"> <img class="navbar__logo" src="../static/img/logo.png" alt="logo-webtooncam"/>
+          </a>
+            <img class="navbar__menu-icon" id="menu" src="../static/img/menu.svg" alt="menuicon"/>
+        <div class="navbar__list-container" id="list"><img class="navbar__close-icon" id="close" src="../static/img/close.svg" alt="closeicon"/>
+          <ul class="navbar__list">
+            <a class="navbar__list-link" href=""> 
+              <li class="navbar__list-item">Home</li></a>
+              <a class="navbar__list-link" href=""> 
+              <li class="navbar__list-item">Generate</li></a>
+        </div>
+      </nav>
+    </header>
+    <div class="line_divisor"></div>
+    <main>
+    {%block content%} {%endblock%}
+    </main>
+    <script src="{{url_for('static', filename='scripts/navbar.js')}}"></script>
+    {% block script %}{% endblock %}
+    <!-- <script src="../static/scripts/navbar.js"></> -->
+
+  </body>
+</html>

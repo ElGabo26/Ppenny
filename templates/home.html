@@ -1,0 +1,25 @@
+{%extends "layout.html"%}
+
+
+{% block title %}HomePage{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='styles/home.css')}}">
+{%endblock%}
+
+
+{%block content%}
+<div class="main__container">
+    <div class="main__text">
+        <h1 class="title">WebtoonCam</h1>
+        <h2 class="subtitle">Generador de imagenes en base al usuario</h2>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius suscipit aliquam accusamus molestiae labore, voluptatum consequatur iure culpa nisi, quas, pariatur ratione quis libero unde adipisci nulla quidem aliquid!</p>
+    </div>
+    
+    <div class="main__btncontainer">
+        <div class="main__circle">
+            <a href="/register" class="main__click">Intenta ya</p>
+        </div>
+    </div>
+</div>
+{%endblock%}

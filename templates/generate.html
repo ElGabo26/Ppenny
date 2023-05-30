@@ -1,0 +1,22 @@
+{%extends "layout.html"%} {% block title %}Generate{% endblock %} {% block head
+%}
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='styles/generate.css')}}"
+/>
+{%endblock%} {%block content%}
+<div class="container">
+  <h1>Video en directo</h1>
+  <div>
+    <img class="video" src="{{url_for('generate')}}" />
+  </div>
+</div>
+<div class="button_container">
+  <button id="cartoon" class="button_cartoon">
+    <a class="link" id="link" href="">Cartoon</a>
+  </button>
+</div>
+
+{%endblock%} {% block script %}
+<script src="../static/scripts/generate.js"></script>
+{% endblock %}
