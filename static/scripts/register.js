@@ -1,0 +1,47 @@
+{%extends "layout.html"%} {% block title %}Register{% endblock %} {% block head
+  %}
+  <link rel="stylesheet" href="../static/styles/register.css" />
+  {%endblock%} {%block content%}
+  
+  <article class="main__container">
+    <form
+      class="main_form"
+      action="{{url_for('registerForm')}}"
+      method="POST"
+      autocomplete="off"
+    >
+      <h1 class="main__title">Registrarse</h1>
+      <div class="main__aspects">
+        <input
+          class="main__input"
+          type="text"
+          spellcheck="false"
+          placeholder="Nombre"
+          name="nombre"
+          onkeydown="handleStartTyping()"
+          onkeyup="handleChange(event)"
+        />
+        <input
+          class="main__input"
+          type="text"
+          spellcheck="false"
+          placeholder="Apellido"
+          name="apellido"
+          onkeydown="handleStartTyping()"
+          onkeyup="handleChange(event)"
+        />
+        <button class="main__button" type="submit">SUBMIT</button>
+      </div>
+      <p class="main__information">
+        Recuerda que si te registras con tu nombre, por el momento no podrás
+        cambiar la foto ingresada.
+      </p>
+  
+    </form>
+  </article>
+  
+  {%endblock%} {% block script %}
+  <script src="../static/scripts/register.js"></script>
+  
+  {% endblock %}
+  

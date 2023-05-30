@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "FredokaRegular";
+  src: url(../font/Fredoka-Regular.ttf);
+}
+
+body {
+  font-family: "FredokaRegular";
+  background-color: #eeeeee;
+  color: #2c3333;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-left: 8%;
+  margin-right: 8%;
+  color: #2c3333;
+}
+
+.main__text {
+  margin-top: 15%;
+}
+
+.title {
+  font-size: 4em;
+  margin: 50px 0 0 0;
+}
+
+.subtitle {
+  font-size: 2em;
+  margin: 10px 0 10px 0;
+}
+
+.main__btncontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13%;
+}
+
+.main__circle {
+  background-color: #fbab32;
+  border-radius: 50%;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__click {
+  font-size: 4em;
+  color: #fafaff;
+  margin-top: 30px;
+  text-decoration: none;
+  /* margin-bottom: 30px; */
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 425px) {
+  .main__container {
+    /* margin: 20px 6% 75px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    margin-left: 5%;
+    margin-right: 0;
+  }
+  .main__text {
+    margin-top: 1%;
+  }
+  .title {
+    font-size: 3em;
+    margin: 20px 0 0 0;
+  }
+  .subtitle {
+    font-size: 1.25em;
+  }
+  .description {
+    font-size: 0.5em;
+    text-align: justify;
+    margin: 8px 20px 8px 0px;
+  }
+  .main__btncontainer {
+    margin-top: 5%;
+  }
+
+  .main__click {
+    font-size: 3em;
+  }
+}

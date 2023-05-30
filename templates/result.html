@@ -1,0 +1,15 @@
+{%extends "layout.html"%} {% block title %}Result{% endblock %} {% block head %}
+<link rel="stylesheet" href="../static/styles/result.css" />
+
+{%endblock%} {%block content%}
+
+<div class="image_cotainer">
+  <img src="{{image_path}}" class="image" alt="Cartoon Imagen" />
+  <button class="download_button">
+    <a href="{{image_path}}" download="cartoon.jpg" class="link_download">
+      Descargar imagen
+    </a>
+  </button>
+</div>
+
+{%endblock%} {% block script %} {% endblock %}
