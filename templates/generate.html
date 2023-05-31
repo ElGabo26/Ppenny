@@ -18,5 +18,10 @@
 </div>
 
 {%endblock%} {% block script %}
-<script src="../static/scripts/generate.js"></script>
+<script
+  async
+  src="{{ url_for('static', filename='scripts/opencv.js') }}"
+  onload="initializeVideoProcessing()"
+></script>
+<script src="{{ url_for('static', filename='scripts/generate.js') }}"></script>
 {% endblock %}

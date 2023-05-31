@@ -5,6 +5,7 @@ from cam import *
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'gokuCrack'
+app.static_folder = 'static'
 
 
 @app.route("/")
